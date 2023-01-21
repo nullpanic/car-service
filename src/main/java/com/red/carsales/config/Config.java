@@ -1,5 +1,7 @@
 package com.red.carsales.config;
 
+import com.red.carsales.carService.CarService;
+import com.red.carsales.carService.carServiveImpl.CarServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +14,11 @@ public class Config {
     @Bean
     public RestTemplate restTemplate() {
         return new RestTemplate();
+    }
+
+    @Bean
+    public CarService carService() {
+        return new CarServiceImpl();
     }
 
 }
