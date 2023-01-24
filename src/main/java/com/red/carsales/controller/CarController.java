@@ -30,7 +30,7 @@ public class CarController {
         return ResponseEntity.ok(carService.getAllAvCars());
     }
 
-    @PostMapping(value = "/car", consumes = {"application/json"})
+    @PostMapping(value = "/cars", consumes = {"application/json"})
     public ResponseEntity<CarDto> addNewCar(@RequestBody CarDto carDto) {
 
         carService.createCar(carDto);
