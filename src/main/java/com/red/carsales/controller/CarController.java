@@ -19,7 +19,7 @@ public class CarController {
     @Autowired
     private CarService carService;
 
-    @GetMapping("/car/{id}")
+    @GetMapping("/cars/{id}")
     public ResponseEntity<CarDto> getCar(@PathVariable Long id) {
 
         return ResponseEntity.ok(carService.getCar(id));
@@ -39,13 +39,13 @@ public class CarController {
 
     }
 
-    @PutMapping
+    @PutMapping("/cars/{id}")
     public ResponseEntity<CarDto> updateCar(@PathVariable Long id, @RequestBody CarDto carDtoUpdate) {
         carService.updateCar(id, carDtoUpdate);
         return ResponseEntity.ok(carDtoUpdate);
     }
 
-    @DeleteMapping("/car/{id}")
+    @DeleteMapping("/cars/{id}")
     public ResponseEntity<String> deleteCar(@PathVariable Long id) {
         carService.deleteCar(id);
         return ResponseEntity.ok("Car with id " + id + " deleted!");

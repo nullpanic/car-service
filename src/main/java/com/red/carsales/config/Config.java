@@ -52,40 +52,6 @@ public class Config {
         return dataSource;
     }
 
-//    @Bean(name = "entityManagerFactory")
-//    LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
-//
-//        LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
-//        entityManagerFactoryBean.setDataSource(dataSource);
-//        entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-//        entityManagerFactoryBean.setPackagesToScan("com.red.carsales.entity");
-//
-//        Properties jpaProperties = new Properties();
-//
-//        //Configures the used database dialect. This allows Hibernate to create SQL
-//        //that is optimized for the used database.
-//        jpaProperties.setProperty("hibernate.dialect",
-//                "org.hibernate.dialect.PostgreSQLDialect");
-//
-//        //Specifies the action that is invoked to the database when the Hibernate
-//        //SessionFactory is created or closed.
-//        jpaProperties.setProperty("hibernate.hbm2ddl.auto", "create");
-//
-//        //Configures the naming strategy that is used when Hibernate creates
-//        //new database objects and schema elements
-//        //jpaProperties.put(PROPERTY_NAME_HIBERNATE_NAMING_STRATEGY, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_NAMING_STRATEGY));
-//
-//        //If the value of this property is true, Hibernate writes all SQL
-//        //statements to the console.
-//        jpaProperties.setProperty("hibernate.show_sql",
-//                "true");
-//
-//        entityManagerFactoryBean.setJpaProperties(jpaProperties);
-//
-//        return entityManagerFactoryBean;
-//    }
-
-
     @Bean
     public LocalSessionFactoryBean localSessionFactoryBean() throws PropertyVetoException {
 

@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@Transactional
 public class CarServiceImpl implements CarService {
 
     @Autowired
@@ -37,6 +36,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Transactional
     public void createCar(CarDto carDto) {
 
         Car car = new Car();
@@ -50,11 +50,13 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
+    @Transactional
     public void deleteCar(Long id) {
         carDao.deleteCar(id);
     }
 
     @Override
+    @Transactional
     public void updateCar(Long id, CarDto carDto) {
 
         Car car = carDao.getCarById(id);
