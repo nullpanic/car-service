@@ -69,7 +69,7 @@ public class Config {
         hibernate.setProperty("hibernate.show_sql",
                 "true");
 
-        hibernate.setProperty("hibernate.hbm2ddl.auto", "create");
+        hibernate.setProperty("hibernate.hbm2ddl.auto", "none");
 
         localSessionFactoryBean.setHibernateProperties(hibernate);
 
