@@ -10,7 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CarDto {
 
-    private String name;
+    private Long id;
+
+    private String model;
 
     private String description;
 
@@ -19,7 +21,8 @@ public class CarDto {
     private int price;
 
     public CarDto(Car car) {
-        this.name = car.getName();
+        this.id = car.getId();
+        this.model = car.getModel();
         this.description = car.getDescription();
         this.photo = car.getPhoto();
         this.price = car.getPrice();

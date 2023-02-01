@@ -36,12 +36,11 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    @Transactional
     public void createCar(CarDto carDto) {
 
         Car car = new Car();
 
-        car.setName(carDto.getName());
+        car.setModel(carDto.getModel());
         car.setDescription(carDto.getDescription());
         car.setPhoto(carDto.getPhoto());
         car.setPrice(carDto.getPrice());
@@ -50,18 +49,16 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    @Transactional
     public void deleteCar(Long id) {
         carDao.deleteCar(id);
     }
 
     @Override
-    @Transactional
     public void updateCar(Long id, CarDto carDto) {
 
         Car car = carDao.getCarById(id);
 
-        car.setName(carDto.getName());
+        car.setModel(carDto.getModel());
         car.setDescription(carDto.getDescription());
         car.setPhoto(carDto.getPhoto());
         car.setPrice(carDto.getPrice());
