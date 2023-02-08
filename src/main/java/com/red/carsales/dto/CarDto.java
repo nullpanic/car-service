@@ -20,6 +20,8 @@ public class CarDto {
 
     private int price;
 
+    private int count;
+
     public CarDto(Car car) {
         this.id = car.getId();
         this.model = car.getModel();
